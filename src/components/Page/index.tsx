@@ -5,7 +5,8 @@ import ModelSection from "../Models/ModelSection";
 
 
 
-import { Container } from "./styles";
+import { Container, Spacer} from "./styles";
+import UniqueOverlay from "../UniqueOverlay";
 
 export const Page: React.FC = () => {
 
@@ -16,13 +17,13 @@ export const Page: React.FC = () => {
         <div>
 
           {[
-            "Model One",
-            "Model Two",
-            "Model Three",
-            "Model Four ",
-            "Model Dive",
-            "Model Six",
-            "Model Seven",
+            "Modelo 1",
+            "Modelo 2",
+            "Modelo 3",
+            "Modelo 4 ",
+            "Modelo 5",
+            "Modelo 6",
+            "Modelo 7",
 
           ].map(modelName => (
             <ModelSection
@@ -32,13 +33,16 @@ export const Page: React.FC = () => {
               overlayNode={
                 <DefaultOverlayContent
                   label={modelName}
-                  description="Order online for delivery"
+                  description=""
                 />
 
               }
             />
           ))}
         </div>
+
+              <Spacer/>
+        <UniqueOverlay/>
       </ModelsWrapper>
     </Container>
 
